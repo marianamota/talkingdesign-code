@@ -1,0 +1,105 @@
+/**
+ * Author(s): James Morris
+ *
+ * HEADER -  MOBILE FIRST
+ *
+ * Page header styles here
+ *
+ */
+
+@import '../variables.less';
+@import '../mixins.less';
+
+ header.page-header {
+ 	background: url('/img/main-header.jpg') top center no-repeat;
+ 	background-size: cover;
+ 	height: 350px;
+ 	width: 100%;
+ 	position: relative;
+ 	h1,
+ 	h2,
+ 	.intro-wrapper {
+ 		background-color: @colorWhite;
+ 		padding: 0.3em;
+ 		display: inline-block;
+ 	}
+ 	h1 {
+ 		margin: 0;
+ 		position: absolute;
+ 		top: 0;
+ 		left: 0;
+ 		padding: 0;
+ 		padding-left: 2rem;
+ 		.fa {
+ 			color: @colorWhite;
+ 			width: 40px;
+ 			height: 40px;
+ 			background: @colorPrimaryL20;
+ 			text-align: center;
+ 		}
+ 	}
+ 	h2 {
+ 		font-size: @sizeS;
+ 		position: absolute;
+ 		bottom: 0;
+ 		right: 0;
+ 		margin: 0;
+ 		padding: 7px;
+ 		padding-right: 2rem;
+ 		width: 80%;
+ 		img {
+ 			width: 30px;
+ 			height: 30px;
+ 			display: inline-block;
+ 			margin-left: 0.4em;
+ 			position: absolute;
+ 			bottom: 3px;
+ 			z-index: @zIndex2;
+ 			.transition(all 0.3s);
+ 			@media @tab {
+	 			&:hover {
+	 				width: 70px;
+	 				height: 70px;
+	 				bottom: 5px;
+	 				.transition(all 0.3s);
+	  			}
+	  		}
+ 		}
+ 	}
+ 	.intro-wrapper {
+ 		position: absolute;
+ 		bottom: 40px;
+ 		right: 0;
+ 		padding: 7px;
+ 		padding-right: 2rem;
+ 		width: 80%;
+ 		font-size: @sizeSSS;
+ 	}
+	@media @portrait-tab {
+		height: 450px;
+	 	.intro {
+	 		float: left;
+	 		width: 42%;
+	 	}
+	 	.author-details h2 {
+	 		float: right;
+	 		width: 30%;
+	 		position: absolute;
+	 		bottom: 0;
+	 	}
+ 	}
+ 	@media @desktop {
+ 		height: 550px;
+ 		h1 {
+ 			padding-left: 1.5rem;
+ 		}
+ 		.intro-wrapper {
+ 			width: 30%;
+ 			height: 40px;
+ 			padding-left: 1.5rem;
+ 			position: absolute;
+ 			top: 55px;
+ 			left: 0;
+ 		}
+ 	}
+ }

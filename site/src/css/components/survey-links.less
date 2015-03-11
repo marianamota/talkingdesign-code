@@ -1,0 +1,40 @@
+/**
+ * Author(s): James Morris
+ *
+ * SURVEY LINKS -  MOBILE FIRST
+ *
+ *
+ */
+
+@import '../variables.less';
+@import '../mixins.less';
+
+.survey-link {
+	display: block;
+	padding: 0.5em;
+	background: @colorPrimaryL20;
+	color: @colorWhite;
+	text-align: center;
+	.transition(background-color 0.3s);
+	&:hover {
+		background: @colorPrimaryL12;
+		color: @colorWhite;
+		.transition(background-color 0.3s);
+	}
+	.fa {
+		font-size: @sizeMS;
+		margin-top: 0.2em;
+		margin-bottom: 0.3em;
+	}
+	h3 {
+		margin: 0;
+		margin-bottom: 0.5em;
+		font-size: @sizeS;
+	}
+	span {
+		font-size: @sizeSSS;
+	}
+	@media @tab {
+		padding: 1em;
+	}
+}

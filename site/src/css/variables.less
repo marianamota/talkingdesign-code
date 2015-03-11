@@ -26,40 +26,69 @@
  * $Colours
  */
 
-//@colorPrimary:        #e7562d; /* Orange */
-//@colorWhite:          #fff;    /* White */
+@colorPrimary:        #ff1300; /* Red */
+@colorWhite:          #fff;    /* White */
+@colorBlack:          #000;    /* Black */
+@colorOffBlack:       #1b1b1b; 
 
 /* Transparency */
-//@colorWhiteT50:       fadeout(@colorWhite, 50%);
+@colorWhiteT30:       fadeout(@colorWhite, 30%);
+@colorWhiteT50:       fadeout(@colorWhite, 50%);
+@colorWhiteT80:       fadeout(@colorWhite, 80%);
+
+@colorOffBlackL15:    lighten(@colorOffBlack, 15%);
+@colorOffBlackL30:    lighten(@colorOffBlack, 30%);
+@colorOffBlackL60:    lighten(@colorOffBlack, 60%);
+@colorOffBlackL70:    lighten(@colorOffBlack, 70%);
+@colorOffBlackL85:    lighten(@colorOffBlack, 85%);
+
+@colorPrimaryL12:     lighten(@colorPrimary, 12%);
+@colorPrimaryL20:     lighten(@colorPrimary, 20%);
+
+@colorTwitter:        #55acee;
+@colorSignUp:         #AA55EE;
+
+@colorLink :          #ff1300;
+@colorHover:          @colorPrimaryL12;
 
 /* $Font family */
-//@fontArial: 'Arial', sans-serif;
+@fontArial: 'Arial', sans-serif;
+@fontRobo: 'Roboto Condensed', sans-serif;
+@fontOpen: 'Open Sans', sans-serif;
 
 /* $Font sizes */
 @sizeBase: 62.5%; //Allows 10px = 1em: all sizes px / 10 for REM conversion
 
-// @sizeSu:    5rem;   //Size = 50px
-// @sizeXXL:   4.3rem;
-// @sizeXL:    3.6rem; //Mobile H1
+@sizeSu:    5rem;   //Size = 50px
+@sizeXXL:   4.3rem;
+@sizeXL:    3.6rem; //
 @sizeL:     2.9rem;
-// @sizeML:    2.5rem; //Mobile H2
+@sizeML:    2.5rem; //
 @sizeM:     2.2rem;
-// @sizeMS:    1.9rem; //Mobile H3
+@sizeMS:    1.9rem; //
 @sizeS:     1.8rem; //Base size = 18px Mobile H4
-// @sizeSS:    1.6rem;
-// @sizeSSS:   1.2rem;
+@sizeSS:    1.6rem;
+@sizeSSS:   1.4rem;
+
+
 
 
 /* $Z-Indexes */
 
-//@zIndex1:   100; //Comment where used
-//@zIndex2:   200; 
+@zIndex1:   100; 
+@zIndex2:   200; //Header author image
 
 
 /* $Spacings */
 
-//@spacingXL:           2em; 
+@spacingXL:           2em; 
 
 
 /* $Line heights */
-//@lineHeight:          1.5em;
+@lineHeight:          1.5em;
+
+
+/* $Media queries */
+@portrait-tab: ~"(min-width: 500px)";
+@tab: ~"(min-width: 870px)";
+@desktop: ~"(min-width: 1024px)";

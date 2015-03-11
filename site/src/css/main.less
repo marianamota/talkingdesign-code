@@ -1,5 +1,5 @@
 /**
- * Author(s): Your name here
+ * Author(s): James Morris
  *
  * SITE -  MOBILE FIRST
  *
@@ -10,6 +10,10 @@
  @import 'normalize.less';
  @import 'variables.less';
  @import 'mixins.less';
+ @import 'components/header.less';
+ @import 'components/video-listing.less';
+ @import 'components/survey-links.less';
+ @import 'components/about.less';
 
 /**
  * CONTENTS
@@ -21,12 +25,112 @@
  *
  */
 
+
+/* $STRUCTURE */
+
 html {
     font-size: @sizeBase;
+    font-family: @fontOpen;
+    color: @colorOffBlack;
 }
 
-main {
+body {
+	font-size: @sizeSS;
+}
+
+header,
+footer {
+	padding: 0 2rem;
+	.box-sizing();
+}
+
+section,
+footer.page-footer {
+	padding: 0 2rem;
+	.box-sizing();
+	@media @desktop {
+		padding: 2rem 1.5rem;
+		padding-bottom: 2.5rem;
+	}
+}
+
+.row {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	max-width: 1400px;
+	.clearfix();
+}
+
+/* $TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @fontRobo;
+}
+
+
+h1 {
+	font-size: @sizeL;
+}
+
+h2 {
+	font-size: @sizeL;
+}
+
+h3 {
+	font-size: @sizeM;
+}
+
+h4 {
+	font-size: @sizeMS;
+}
+
+h5 {
     font-size: @sizeS;
 }
 
+/* $LINKS */ 
 
+a {
+	color: @colorLink;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: @colorHover;
+		text-decoration: none;
+		.transition(color 0.3s);
+	}
+}
+
+
+/* $LISTS */
+
+section ul,
+footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	.clearfix();
+}
+
+/* $BUTTON */
+
+a.btn,
+button {
+	border: 2px solid @colorWhite;
+	padding: 0.45em 1em;
+	color: @colorWhite;
+	font-size: @sizeSS;
+	display: inline-block;
+	.transition(background 0.3s);
+	&:hover {
+		background: @colorWhiteT80;
+		cursor: pointer;
+		.transition(background 0.3s);
+	}
+}
