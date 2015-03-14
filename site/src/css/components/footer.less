@@ -1,0 +1,42 @@
+/**
+ * Author(s): James Morris
+ *
+ * FOOTER -  MOBILE FIRST
+ *
+ * Page footer styles here
+ *
+ */
+
+@import '../variables.less';
+@import '../mixins.less';
+
+footer.page-footer {
+ 	background: @colorMidGrey;
+ 	li:last-child {
+ 		margin-right: 0;
+ 	}
+	@media @portrait-tab {
+		li.twitter,
+		li.sign-up {
+			padding: 0;
+		}
+		li.sign-up {
+			margin-left: 0;
+		}
+		li.twitter {
+			float: left;
+			clear: none;
+			margin-left: 2.5%;
+		}
+	}
+ 	@media @tab {
+		li.twitter,
+		li.sign-up {
+			padding: 2em;
+		}
+		li.twitter {
+			clear: none;
+			margin-left: 0;
+		}
+ 	}
+}

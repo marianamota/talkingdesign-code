@@ -11,6 +11,7 @@
  @import 'variables.less';
  @import 'mixins.less';
  @import 'components/header.less';
+ @import 'components/footer.less';
  @import 'components/video-listing.less';
  @import 'components/about.less';
 
@@ -37,27 +38,39 @@ body {
 	font-size: @sizeSS;
 }
 
-header,
-footer {
-	padding: 0 2rem;
-	.box-sizing();
-}
-
 section,
 footer.page-footer {
-	padding: 0 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	.box-sizing();
+	@media @portrait-tab {
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+	}
 	@media @desktop {
-		padding: 2rem 1.5rem;
+		padding: 2rem 2.5%;
 		padding-bottom: 2.5rem;
 	}
 }
+
+section {
+	padding-bottom: 1.5rem;
+	@media @portrait-tab {
+		padding-bottom: 2.5rem;		
+	}
+}
+
+footer {
+	padding-bottom: 2.5em;
+	.box-sizing();
+}
+
 
 .row {
 	width: 100%;
 	margin: 0 auto;
 	display: block;
-	max-width: 1400px;
+	max-width: 1600px;
 	.clearfix();
 }
 
@@ -125,11 +138,13 @@ button {
 	padding: 0.45em 1em;
 	color: @colorPrimary;
 	font-size: @sizeSS;
+	font-weight: bold;
 	display: inline-block;
 	.transition(background 0.3s);
 	&:hover {
 		background: @colorPrimaryL12;
 		cursor: pointer;
-		.transition(background 0.3s);
+		color: @colorWhite;
+		.transition(all 0.3s);
 	}
 }

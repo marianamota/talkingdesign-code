@@ -16,90 +16,73 @@
  	height: 350px;
  	width: 100%;
  	position: relative;
+ 	.intro {
+ 		position: absolute;
+ 		top: 10%;
+ 		left: 0;
+ 		width: 100%;
+	    padding: 0 2rem;
+	    .box-sizing();
+	    .text-shadow(0 1px 2px @colorBlackT40);
+	    @media @portrait-tab {
+	 		top: 20%;
+	 		.text-shadow(none);
+	    }
+ 	}
  	h1,
  	h2,
- 	.intro-wrapper {
- 		background-color: @colorWhite;
+ 	.intro-wrapper,
+ 	.author-details {
+ 		text-align: center;
  		padding: 0.3em;
- 		display: inline-block;
+ 		color: @colorWhite;
+ 		.box-sizing();
  	}
  	h1 {
- 		margin: 0;
- 		position: absolute;
- 		top: 0;
- 		left: 0;
- 		padding: 0;
- 		padding-left: 2rem;
- 		.fa {
- 			color: @colorWhite;
- 			width: 40px;
- 			height: 40px;
- 			background: @colorPrimaryL20;
- 			text-align: center;
+ 		width: 100%;
+ 		img {
+ 			margin: 0 auto;
+ 			display: block;
+ 			max-width: 500px;
+ 			width: 85%;
+ 			@media @portrait-tab {
+ 				width: 100%;
+ 			}
+ 		}
+ 		span {
+ 			.hidden();
+ 			display: block;
  		}
  	}
- 	h2 {
- 		font-size: @sizeS;
- 		position: absolute;
- 		bottom: 0;
- 		right: 0;
- 		margin: 0;
- 		padding: 7px;
- 		padding-right: 2rem;
- 		width: 80%;
+ 	.author-details {
+	 	h2 {
+	 		font-size: @sizeS;
+	 		margin-top: 0;
+	 	}
  		img {
- 			width: 30px;
- 			height: 30px;
+ 			width: 50px;
+ 			height: 50px;
  			display: inline-block;
- 			margin-left: 0.4em;
- 			position: absolute;
  			bottom: 3px;
  			z-index: @zIndex2;
- 			.transition(all 0.3s);
  			@media @tab {
-	 			&:hover {
-	 				width: 70px;
-	 				height: 70px;
-	 				bottom: 5px;
-	 				.transition(all 0.3s);
-	  			}
+ 				width: 80px;
+ 				height: 80px;
+  				margin: 0.8em 0;
 	  		}
  		}
- 	}
+	}
  	.intro-wrapper {
- 		position: absolute;
- 		bottom: 40px;
- 		right: 0;
- 		padding: 7px;
- 		padding-right: 2rem;
- 		width: 80%;
+ 		max-width: 500px;
+ 		width: 100%;
+ 		margin: 0 auto;
+ 		color: @colorWhite;
  		font-size: @sizeSSS;
  	}
 	@media @portrait-tab {
 		height: 450px;
-	 	.intro {
-	 		float: left;
-	 		width: 42%;
-	 	}
-	 	.author-details h2 {
-	 		float: right;
-	 		width: 30%;
-	 		position: absolute;
-	 		bottom: 0;
-	 	}
  	}
  	@media @desktop {
  		height: 550px;
- 		h1 {
- 			padding-left: 1.5rem;
- 		}
- 		.intro-wrapper {
- 			width: 30%;
- 			height: 40px;
- 			padding-left: 1.5rem;
- 			position: absolute;
- 			top: 55px;
- 			left: 0;
- 		}
  	}
  }

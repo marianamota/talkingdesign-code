@@ -17,12 +17,9 @@ li.video {
 	h3 {
 		font-size: @sizeM;
 		margin: 0.15em 0;
-		padding: 0.2em;
+		padding: 0.2em 0.2em 0.2em 0;
 		background-color: @colorWhite;
 		display: inline-block;
-		position: absolute;
-		bottom: -7px;
-		left: 0;
 	}
 	h4 {
 		margin-top: 0;
@@ -36,9 +33,14 @@ li.video {
 		width: 100%;
 	}
 	.video-coming {
-		width: 100%;
-		background-color: #f1f1f1;
-		height: 169px;
+		margin-top: 2em;
+		text-align: center;
+		div {
+			color: @colorOffBlackL30;
+		}
+		@media @desktop {
+			margin-top: 3em;
+		}
 	}
 	@media @tab {
 		h3 {
