@@ -11,8 +11,8 @@
 @import '../mixins.less';
 
  header.page-header {
- 	background: url('/img/talkingdesign-header-illustration.svg') top center no-repeat;
- 	background-size: cover;
+ 	background: url('/img/talkingdesign-header-illustration.svg') top center repeat-x @colorMidGrey;
+ 	background-size: contain;
  	height: 300px;
  	width: 100%;
  	position: relative;
@@ -23,10 +23,9 @@
  		width: 100%;
 	    padding: 0 2rem;
 	    .box-sizing();
-	    .text-shadow(0 1px 2px @colorBlackT40);
+	    .text-shadow(0 2px 3px @colorWhiteT30);
 	    @media @tab {
 	 		top: 20%;
-	 		.text-shadow(none);
 	    }
  	}
  	h1,
@@ -35,7 +34,8 @@
  	.author-details {
  		text-align: center;
  		padding: 0.3em;
- 		color: @colorWhite;
+ 		color: @colorOffBlack;
+ 		.text-shadow(0 0px 10px @colorMidGrey);
  		.box-sizing();
  	}
  	h1 {
@@ -82,8 +82,9 @@
  		max-width: 500px;
  		width: 100%;
  		margin: 0 auto;
- 		color: @colorWhite;
+ 		color: @colorOffBlack;
  		font-size: @sizeS;
+ 		background-color: @colorMidGrey;
  	}
 	@media @portrait-tab {
 		height: 450px;
