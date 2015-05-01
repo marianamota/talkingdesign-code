@@ -11,8 +11,8 @@
 @import '../mixins.less';
 
  header.page-header {
- 	background: url('/img/talkingdesign-header-illustration.svg') top center repeat-x @colorMidGrey;
- 	background-size: contain;
+ 	background: url('/img/talking-design-illustration.jpg') top center repeat-x @colorMidGrey;
+ 	background-size: cover;
  	height: 300px;
  	width: 100%;
  	position: relative;
@@ -23,7 +23,6 @@
  		width: 100%;
 	    padding: 0 2rem;
 	    .box-sizing();
-	    .text-shadow(0 2px 3px @colorWhiteT30);
 	    @media @tab {
 	 		top: 20%;
 	    }
@@ -35,7 +34,6 @@
  		text-align: center;
  		padding: 0.3em;
  		color: @colorOffBlack;
- 		.text-shadow(0 0px 10px @colorMidGrey);
  		.box-sizing();
  	}
  	h1 {
@@ -83,13 +81,27 @@
  		width: 100%;
  		margin: 0 auto;
  		color: @colorOffBlack;
- 		font-size: @sizeS;
- 		background-color: @colorMidGrey;
+ 		font-size: @sizeSS;
+ 		background-color: rgba(238, 238, 238, 0.7);
+		div {
+			@media @portrait-tab {
+				font-size: @sizeS;
+	 		}
+	 	}
  	}
 	@media @portrait-tab {
 		height: 450px;
+		background-size: contain;
  	}
  	@media @desktop {
  		height: 500px;
  	}
+ 	.illustrator-credit {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 0.8em 1em;
+		font-size: 1.2rem;
+ 		background-color: rgba(238, 238, 238, 0.7);
+}
  }
