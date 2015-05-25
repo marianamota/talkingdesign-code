@@ -14,6 +14,7 @@
  @import 'components/footer.less';
  @import 'components/video-listing.less';
  @import 'components/about.less';
+ @import 'components/site-nav.less';
 
 /**
  * CONTENTS
@@ -106,6 +107,12 @@ h5 {
     font-size: @sizeS;
 }
 
+.talk-blurb,
+.blurb {
+	font-size: @sizeSSS;
+    color: @colorOffBlackL30;
+}
+
 /* $LINKS */ 
 
 a {
@@ -128,6 +135,24 @@ footer ul {
 	padding: 0;
 	list-style: none;
 	.clearfix();
+}
+
+nav {
+	ul {
+		margin: 0;
+		padding: 1rem 2rem;
+		.clearfix();
+		@portrait-tab {
+			padding: 1.2rem 2.5%;
+		}
+		li {
+			list-style: none;
+			float: left;
+		}
+		li a {
+			font-family: @fontRobo;
+		}
+	}
 }
 
 /* $BUTTON */

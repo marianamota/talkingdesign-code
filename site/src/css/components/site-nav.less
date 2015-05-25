@@ -1,0 +1,41 @@
+/**
+ * Author(s): James Morris
+ *
+ * NAVIGATION -  MOBILE FIRST
+ *
+ *
+ */
+
+@import '../variables.less';
+@import '../mixins.less';
+
+nav.site-navigation {
+	width: 100%;
+	background: @colorWhite;
+	position: fixed;
+	top: 0;
+	z-index: @zIndex3;
+	border-bottom: 1px solid @colorOffBlackL73;
+	.box-sizing();
+	li {
+		&:after {
+			float: right;
+			content: "♦";
+			font-size: @sizeSS;
+			margin-right: 0.8rem;
+			margin-left: 0.8rem;
+		}
+		&:last-child:after {
+			content: "";
+			padding-right: 0;
+			margin-right: 0;
+		}
+	}
+	li a {
+		.vertical-align-middle();
+	}
+	.logo-link img {
+		width: 110px;
+  		margin-top: 0.4rem;
+	}
+}

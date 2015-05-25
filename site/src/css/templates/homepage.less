@@ -6,6 +6,15 @@
 
  @import 'variables.less';
  @import 'mixins.less';
+ @import 'components/video-listing.less';
+ @import 'components/blog-listing-item.less';
+
+/* $LISTING TYPES */
+.blog-listing {
+	margin-top: 2rem;
+	border-top: 1px dotted @colorOffBlackL73;
+}
+
 
  /* $VIDEO AND SECTION INFO */
 // Layout of video listing
@@ -20,6 +29,7 @@ li.section-info {
 
 li.section-info,
 li.video,
+li.blog-item,
 footer li {
 	&.twitter,
 	&.sign-up,
