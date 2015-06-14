@@ -11,8 +11,7 @@
 @import '../mixins.less';
 
  header.page-header {
- 	background: url('/img/talking-design-illustration.jpg') top center repeat-x @colorMidGrey;
- 	background-size: cover;
+ 	background: @colorMidGrey;
  	height: 300px;
  	width: 100%;
  	position: relative;
@@ -23,26 +22,23 @@
  		left: 0;
  		width: 100%;
 	    padding: 0 2rem;
-	    .light-grey-grad();
 	    .box-sizing();
 	    @media @tab {
 	 		top: 20%;
 	    }
  	}
- 	h1,
  	h2,
  	.intro-wrapper,
  	.author-details {
- 		text-align: center;
  		padding: 0.3em;
  		color: @colorOffBlack;
+ 		font-size: @sizeSS;
  		.box-sizing();
  	}
  	h1 {
  		width: 100%;
  		margin-bottom: 0;
  		img {
- 			margin: 0 auto;
  			display: block;
  			max-width: 500px;
  			width: 85%;
@@ -62,7 +58,7 @@
  	}
  	.author-details {
 	 	h2 {
-	 		font-size: @sizeM;
+	 		font-size: @sizeSS;
 	 		margin-top: 0;
 	 	}
  		img {
@@ -81,7 +77,6 @@
  	.intro-wrapper {
  		max-width: 500px;
  		width: 100%;
- 		margin: 0 auto;
  		color: @colorOffBlack;
  		font-size: @sizeSS;
 		div {
@@ -91,8 +86,10 @@
 	 	}
  	}
 	@media @portrait-tab {
-		height: 450px;
 		background-size: contain;
+ 	}
+ 	@media @tab {
+ 		height: 450px;
  	}
  	@media @desktop {
  		height: 500px;
@@ -103,6 +100,5 @@
 		right: 0;
 		padding: 0.8em 1em;
 		font-size: 1.2rem;
-	    .light-grey-grad();
 	}
 }

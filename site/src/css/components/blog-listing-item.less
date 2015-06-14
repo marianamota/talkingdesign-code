@@ -5,8 +5,73 @@
  *
  */
 
- li.blog-item {
- 	h4 {
- 		margin-bottom: 0.5rem;
+ @import '../variables.less';
+ @import '../mixins.less';
+
+li.blog-item {
+ 	margin-left: 0;
+ 	margin-bottom: 1.25rem;
+ 	@media @portrait-tab {
+  		float: left;
+		width: 47.5%;
+		margin-right: 2.5%;
+		&:nth-child(even) {
+			margin-right: 0;
+			margin-left: 2.5%;
+		}
+		&:nth-child(odd) {
+			clear: left;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+ 		&:last-child {
+ 			margin-right: 50%;
+ 		}
  	}
- }
+ 	@media @tab {
+		width: 30.942%;
+		margin-right: 3.343%;
+		&:nth-child(even) {
+			margin-right: 3.343%;
+			margin-left: 0;
+		}
+		&:nth-child(odd) {
+			clear: none;
+		}
+		&:nth-child(n+4) {
+			margin-right: 0;
+		}
+		&:nth-child(n+5) {
+			clear: left;
+		}
+ 		&:last-child {
+ 			margin-right: 0;
+ 		}
+ 	}
+ 	.tag {
+ 		margin-top: 1.8rem;
+ 		margin-bottom: 0;
+ 	}
+ 	a {
+ 		display: block;
+ 		&:hover {
+ 			.tag {
+ 				background-color: @colorHover;
+ 				.transition(0.3s ease background-color);
+ 			}
+ 		}
+ 		.tag:after {
+ 			content: "";
+ 			height: 1px;
+ 			background-color: @colorHover;
+ 			width: 0;
+ 			float: right;
+ 		}
+ 		h4 {
+ 			color: @colorOffBlack;
+ 			margin-top: 0.5rem;
+ 			margin-bottom: 0.5rem;
+ 		}
+ 	}
+}

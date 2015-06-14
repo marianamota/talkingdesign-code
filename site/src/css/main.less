@@ -113,6 +113,14 @@ h5 {
     color: @colorOffBlackL30;
 }
 
+.topic {
+	font-size: @sizeM;
+	color: @colorOffBlackL60;
+	margin-bottom: 1.2rem;
+	display: inline-block;
+	text-transform: uppercase;		
+}
+
 /* $LINKS */ 
 
 a {
@@ -130,7 +138,8 @@ a {
 /* $LISTS */
 
 section ul,
-footer ul {
+footer ul,
+aside ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -153,6 +162,19 @@ nav {
 			font-family: @fontRobo;
 		}
 	}
+}
+
+.tags li,
+.tag {
+	color: @colorWhite;
+	background-color: @colorOffBlackL70;
+	font-family: @fontRobo;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 0.4rem 0.6rem;
+	letter-spacing: 0.2rem;
+	margin: 0.2rem 0 0.45rem 0;
+	font-size: @sizeTag;
 }
 
 /* $BUTTON */
