@@ -11,15 +11,20 @@
 
 nav.site-navigation {
 	width: 100%;
-	background: @colorWhite;
-	position: fixed;
-	top: 0;
-	z-index: @zIndex3;
-	border-bottom: 1px solid @colorOffBlackL73;
+	background: @colorMidGrey;
 	.box-sizing();
+	&.fixed {
+		position: fixed;
+		top: 0;
+		z-index: @zIndex3;
+	}
+	ul {
+		float: right;
+	}
 	li {
 		margin-right: 0.3rem;
 		margin-left: 0.3rem;
+		text-align: right;
 		&:last-child:after {
 			content: "";
 			padding-right: 0;
@@ -27,25 +32,24 @@ nav.site-navigation {
 		}
 	}
 	li a {
-		padding-right: 1rem;
-		padding-left: 1rem;
+		padding: 0.5rem;
 		letter-spacing: 0.025rem;
-		color: @colorOffBlackL70;
+		color: @colorPrimaryL20;
 		font-size: @sizeSS;
 		.vertical-align-middle();
 		&:hover {
-			color: @colorHover;
+			background: @colorWhite; 
 			.transition(0.2s ease color);
 		}
 	}
-	.logo-link {
-		margin-left: 0;
-		a {
-			padding-left: 0;
-		} 
-		img {
-			width: 110px;
-  			margin-top: 0.4rem;
-		}
-	}
+	// .logo-link {
+	// 	margin-left: 0;
+	// 	a {
+	// 		padding-left: 0;
+	// 	} 
+	// 	img {
+	// 		width: 110px;
+ //  			margin-top: 0.4rem;
+	// 	}
+	// }
 }

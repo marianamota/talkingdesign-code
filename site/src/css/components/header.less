@@ -15,10 +15,9 @@
  	height: 300px;
  	width: 100%;
  	position: relative;
-	margin-top: 46px; //Navigation offset 
  	.intro {
  		position: absolute;
- 		top: 10%;
+ 		top: 0%;
  		left: 0;
  		width: 100%;
 	    padding: 0 2rem;
@@ -30,14 +29,14 @@
  	h2,
  	.intro-wrapper,
  	.author-details {
- 		padding: 0.3em;
+ 		padding: 0.3em 0;
  		color: @colorOffBlack;
  		font-size: @sizeSS;
  		.box-sizing();
  	}
  	h1 {
  		width: 100%;
- 		margin-bottom: 0;
+ 		margin-bottom: 0.85rem;
  		img {
  			display: block;
  			max-width: 500px;
@@ -58,27 +57,15 @@
  	}
  	.author-details {
 	 	h2 {
-	 		font-size: @sizeSS;
+	 		font-size: @sizeSSS;
 	 		margin-top: 0;
 	 	}
- 		img {
- 			width: 50px;
- 			height: 50px;
- 			display: inline-block;
- 			bottom: 3px;
- 			z-index: @zIndex2;
- 			@media @tab {
- 				width: 80px;
- 				height: 80px;
-  				margin: 0.8em 0;
-	  		}
- 		}
 	}
  	.intro-wrapper {
  		max-width: 500px;
  		width: 100%;
  		color: @colorOffBlack;
- 		font-size: @sizeSS;
+ 		font-size: @sizeSSS;
 		div {
 			@media @portrait-tab {
 				font-size: @sizeS;
