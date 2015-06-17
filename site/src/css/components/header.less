@@ -27,13 +27,14 @@
  	}
  	.intro {
  		position: absolute;
- 		top: 0%;
+ 		top: 6%;
  		left: 0;
  		width: 100%;
 	    padding: 0 2rem;
 	    .box-sizing();
 	    @media @tab {
-	 		top: 20%;
+	 		top: 10%;
+	 		width: 50%;
 	    }
  	}
  	h2,
@@ -70,6 +71,9 @@
 	 		font-size: @sizeSSS;
 	 		margin-top: 0;
 	 	}
+	 	@media @tab { 
+			font-size: @sizeS;
+	 	}
 	}
  	.intro-wrapper {
  		max-width: 500px;
@@ -83,10 +87,24 @@
 	 	}
  	}
  	.partner {
+ 		h3 {
+ 			font-size: @sizeSSS;
+ 			margin-top: 0;
+ 			text-transform: uppercase;
+ 			color: @colorOffBlackL60;
+ 		}
 		img {
 			width: 100%;
 			height: auto;
-			max-width: 185px;
+			max-width: 145px;
+		}
+		a {
+			border: none;
+		}
+		@media @tab {
+			img {
+				max-width: 155px;
+			}
 		}
  	}
  	.illustrator-credit {
@@ -95,5 +113,14 @@
 		right: 0;
 		padding: 0.8em 1em;
 		font-size: 1.2rem;
+	}
+	/* $LINKS */ 
+	a {
+		color: @colorOffBlack; 
+		border-bottom: 1px dotted @colorOffBlackL60;
+		&:hover {
+			.transition(0.5s ease border);
+			border-bottom: 1px solid;
+		}
 	}
 }
