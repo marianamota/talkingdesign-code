@@ -12,27 +12,15 @@
 
  header.page-header {
  	width: 100%;
- 	height: 335px;
  	position: relative;
  	border-bottom: 1px solid @colorMidGrey;
+ 	padding: 6rem 0;
  	.box-shadow(0 1px 3px @colorBlackT95);
-	@media @portrait-tab {
-		background-size: contain;
- 	}
- 	@media @tab {
- 		height: 400px;
- 	}
- 	@media @desktop {
- 		height: 450px;
- 	}
  	.intro {
- 		position: absolute;
- 		top: 6%;
- 		left: 0;
  		width: 100%;
-	    padding: 0 2rem;
+	    padding: 0 2.5%;
 	    .box-sizing();
-	    @media @tab {
+	    @media @portrait-tab {
 	 		top: 10%;
 	 		width: 50%;
 	    }
@@ -113,6 +101,44 @@
 		right: 0;
 		padding: 0.8em 1em;
 		font-size: 1.2rem;
+	}
+	.stage-image {
+		float: right;
+		width: 50%;
+		position: relative;
+		display: none;
+		@media @portrait-tab {
+			display: block;
+			height: 180px;
+		}
+		.image {
+			display: block;
+			height: 110px;
+			width: 100%;
+			position: absolute;
+			top: 12%;
+			right: 30%;
+			padding: 1.5rem;
+			@media @tab {
+				width: 180px;
+				height: 180px;
+				padding: 2rem;
+				&:after {
+					content: "";
+					display: block;
+					height: 10px;
+					width: 50px;
+					margin: 6px auto;
+					background-color: @colorMidGrey;
+					.box-shadow(0 0 12px @colorMidGrey);
+					.border-radius(50%);				
+				}
+			}
+		}
+		.image img {
+			margin: 0 auto;
+			display: block;
+		}
 	}
 	/* $LINKS */ 
 	a {
