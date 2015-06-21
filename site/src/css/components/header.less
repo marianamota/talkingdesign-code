@@ -14,7 +14,7 @@
  	width: 100%;
  	position: relative;
  	border-bottom: 1px solid @colorMidGrey;
- 	padding: 6rem 0;
+ 	padding: 3.4rem 0 6rem 0;
  	.box-shadow(0 1px 3px @colorBlackT95);
  	.intro {
  		width: 100%;
@@ -33,9 +33,17 @@
  		font-size: @sizeSS;
  		.box-sizing();
  	}
+ 	.intro-wrapper,
+ 	.author-details,
+ 	.partner h3,
+ 	.partner img,
+ 	.stage-image {
+ 		.opacity(0);
+ 	}
  	h1 {
  		width: 100%;
  		margin-bottom: 0.85rem;
+ 		.opacity(0);
  		img {
  			display: block;
  			max-width: 500px;
@@ -86,7 +94,8 @@
 			height: auto;
 			max-width: 145px;
 		}
-		a {
+		a,
+		a:hover {
 			border: none;
 		}
 		@media @tab {
@@ -111,33 +120,48 @@
 			display: block;
 			height: 180px;
 		}
+		.image img {
+			margin: 0 auto;
+			display: block;
+			.transition(margin-top ease 0.5s);
+			&:after {
+				content: "";
+				display: block;
+				height: 10px;
+				width: 50px;
+				position: absolute;
+				top: 97%;
+				right: 40%;
+				background-color: @colorMidGrey;
+				.transition(width ease 0.5s);					
+				.box-shadow(0 0 12px @colorMidGrey);
+				.border-radius(50%);
+				&:hover {
+					width: 40px;
+				}				
+			}	
+		}
 		.image {
 			display: block;
 			height: 110px;
 			width: 100%;
 			position: absolute;
 			top: 12%;
-			right: 30%;
 			padding: 1.5rem;
-			@media @tab {
-				width: 180px;
-				height: 180px;
-				padding: 2rem;
-				&:after {
-					content: "";
-					display: block;
-					height: 10px;
-					width: 50px;
-					margin: 6px auto;
-					background-color: @colorMidGrey;
-					.box-shadow(0 0 12px @colorMidGrey);
-					.border-radius(50%);				
+			width: 180px;
+			height: 180px;
+			right: 12%;
+			padding: 2rem;
+			.box-sizing();
+			&:hover {
+				img {
+					margin-top: -10px;
+					.transition(margin-top ease 0.5s);
 				}
 			}
-		}
-		.image img {
-			margin: 0 auto;
-			display: block;
+			@media @tab {
+				right: 30%;
+			}
 		}
 	}
 	/* $LINKS */ 

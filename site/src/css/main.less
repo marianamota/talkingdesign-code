@@ -36,6 +36,7 @@ html {
 
 body {
 	font-size: @sizeSS;
+	border-top: 3px solid @colorPrimary;
 }
 
 section,
@@ -175,6 +176,20 @@ nav {
 	letter-spacing: 0.2rem;
 	margin: 0.2rem 0 0.45rem 0;
 	font-size: @sizeTag;
+	&:hover {
+		color: @colorWhite;
+		background-color: @colorPrimaryL12;
+		.transition(all ease 0.3s);
+	}
+}
+
+.tag-list {
+	list-style: none;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin-right: 0.3rem;
+	}
 }
 
 /* $BUTTON */

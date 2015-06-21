@@ -11,6 +11,7 @@
 
 nav.site-navigation {
 	width: 100%;
+	border-bottom: 2px solid @colorMidGrey;
 	.box-sizing();
 	&.fixed {
 		position: fixed;
@@ -21,22 +22,26 @@ nav.site-navigation {
 		float: right;
 	}
 	li {
-		margin-right: 0.3rem;
-		margin-left: 0.3rem;
+		margin-right: 1.3rem;
+		margin-left: 1.3rem;
 		text-align: right;
 		&:last-child:after {
 			content: "";
 			padding-right: 0;
 			margin-right: 0;
 		}
+		&.active a {
+			border-bottom: 2px solid @colorPrimary;
+		}
 	}
 	li a {
 		letter-spacing: 0.025rem;
 		color: @colorOffBlack; 
 		font-weight: 600;
+		text-transform: uppercase;
 		&:hover {
 			.transition(0.5s ease border);
-			border-bottom: 1px solid;
+			border-bottom: 2px solid;
 		}
 	}
 }
