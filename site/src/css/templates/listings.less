@@ -1,0 +1,56 @@
+/**
+ * Author(s): James Morris
+ *
+ * LISTING TEMPLATE
+ */
+
+ @import 'variables.less';
+ @import 'mixins.less';
+ @import 'components/article.less';
+ @import 'components/blog-listing-item.less';
+
+ /* $LISTING TYPES */
+.blog-listing {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	.clearfix();
+	article {
+		margin: 0;
+		padding: 1rem 0;
+		h2 {
+			text-transform: uppercase;
+			margin: 0;
+		}
+		h3.topic {
+			font-size: @sizeS;
+			margin-bottom: 0.2em;
+		}
+	}
+	li.blog-item:first-child {
+	 	margin-left: 0;
+	}
+	@media @portrait-tab {
+		li.blog-item {
+			float: none;
+			width: 100%;
+		}
+		li.blog-item:first-child,
+		li.blog-item:nth-child(even) {
+	 		margin-left: 0;
+		}
+	}
+	@media @tab {
+		margin-left: 0%;
+		float: none;
+		width: 50%;
+		li.blog-item {
+			float: none;
+			width: 100%;
+		}
+		li.blog-item:first-child {
+	 		margin-left: 0;
+		}
+	}
+}
