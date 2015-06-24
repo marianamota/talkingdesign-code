@@ -124,22 +124,6 @@
 			margin: 0 auto;
 			display: block;
 			.transition(margin-top ease 0.5s);
-			&:after {
-				content: "";
-				display: block;
-				height: 10px;
-				width: 50px;
-				position: absolute;
-				top: 97%;
-				right: 40%;
-				background-color: @colorMidGrey;
-				.transition(width ease 0.5s);					
-				.box-shadow(0 0 12px @colorMidGrey);
-				.border-radius(50%);
-				&:hover {
-					width: 40px;
-				}				
-			}	
 		}
 		.image {
 			display: block;
@@ -153,6 +137,19 @@
 			right: 12%;
 			padding: 2rem;
 			.box-sizing();
+			&:after {
+				content: "";
+				display: block;
+				height: 10px;
+				width: 50px;
+				position: absolute;
+				top: 97%;
+				right: 40%;
+				background-color: @colorMidGrey;
+				.transition(width ease 0.5s);					
+				.box-shadow(0 0 12px @colorMidGrey);
+				.border-radius(50%);			
+			}
 			&:hover {
 				img {
 					margin-top: -10px;

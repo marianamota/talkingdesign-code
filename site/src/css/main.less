@@ -165,6 +165,45 @@ nav {
 	}
 }
 
+.pagination {
+	list-style: none;
+	margin: 2rem auto;
+	padding-top: 2rem;
+	border-top: 1px dotted @colorMidGrey;
+	width: 100%;
+	li {
+		display: inline-block;
+		margin-right: 0.5em;
+		&.active a {
+			background: @colorPrimary;
+			cursor: pointer;
+			color: @colorWhite;
+			.transition(all 0.3s);
+			&:hover {
+				border: 2px solid @colorPrimary;
+				background: @colorWhite;
+				color: @colorPrimary;
+				font-size: @sizeSS;				
+			}			
+		}
+	}
+	li a {
+		border: 2px solid @colorPrimaryL12;
+		padding: 0.45em 1em;
+		color: @colorPrimaryL12;
+		font-size: @sizeSS;
+		font-weight: bold;
+		display: inline-block;
+		.transition(background 0.3s);
+		&:hover {
+			background: @colorPrimaryL12;
+			cursor: pointer;
+			color: @colorWhite;
+			.transition(all 0.3s);
+		}
+	}
+}
+
 .tags li,
 .tag {
 	color: @colorWhite;
@@ -208,5 +247,72 @@ button {
 		cursor: pointer;
 		color: @colorWhite;
 		.transition(all 0.3s);
+	}
+}
+
+/* $FOOTER */
+
+li.section-info,
+li.video,
+footer li {
+	&.twitter,
+	&.sign-up,
+	&.about {
+		display: block;
+		color: @colorOffBlack;
+		.box-sizing();
+		h2 {
+			margin: 0.5em 0;
+			font-size: @sizeL;
+		}
+		span,
+		p {
+			font-size: @sizeSS;
+		}
+		.fa {
+			margin-right: 0.3em;
+		}
+	}
+	&.about {
+		height: auto;
+		padding: 0;
+		line-height: 1.6em;
+	}
+	@media @portrait-tab {
+		&.about {
+			width: 100%;
+			clear: left;
+		}
+  		float: left;
+		width: 47.5%;
+		margin-right: 2.5%;
+		&:nth-child(even) {
+			margin-right: 0;
+			margin-left: 2.5%;
+		}
+		&:nth-child(odd) {
+			clear: left;
+		}
+	}
+	@media @tab {
+		&.about {
+			width: 48.75%;
+			float: left;
+		}
+		width: 23.125%;
+		margin-right: 2.5%;
+		&:nth-child(even) {
+			margin-right: 2.5%;
+			margin-left: 0;
+		}
+		&:nth-child(odd) {
+			clear: none;
+		}
+		&:nth-child(n+4) {
+			margin-right: 0;
+		}
+		&:nth-child(n+5) {
+			clear: left;
+		}
 	}
 }
